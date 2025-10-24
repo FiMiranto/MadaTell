@@ -1,72 +1,135 @@
-:root{
-    --primary-color:#fff5d7;
-    --secondary-color:#01572d;
+:root {
+    --primary-color: #fff5d7;
+    --secondary-color: #01572d;
+    --tertiary-color: white;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--primary-color);
-}
-body {
-  background-color: var(--primary-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
-  height: 100vh;       
 }
 
-header{
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
     align-items: flex-start;
     width: 100%;
 }
 
-.logo{
+.logo {
     height: 15vh;
     margin-top: 5px;
     margin-left: 5px;
     padding: 0;
-    box-shadow:2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-h1{
+
+h1 {
     color: var(--secondary-color);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 5vh;
 }
-main{
+
+main {
     text-align: center;
     border-radius: 20%;
-    box-shadow:5px 5px 5px 5px rgba(0, 0, 0, 0.3);
-    height: 60vh;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    height: 70vh;
     width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--tertiary-color);
     animation: login 1s;
 }
-form{
+
+form {
     display: flex;
     flex-direction: column;
+    gap: 1vh;
 }
+
 @keyframes login {
-    0%{
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 100%;
     }
 }
-.accountLogin,.password{
+
+.accountLogin,
+.password {
+    height: 2vh;
     width: 25vw;
-    padding: 1rem;
-}
-h2{
-    text-align: start;
-}
-.btnLogin,button{
-    color: white;
-    background-color: var(--secondary-color);
-    font-size: large;
+    padding: 2vh;
+    border-radius: 10px;
 }
 
+h2 {
+    font-size: 2vh;
+    text-align: start;
+}
+.LoginText{
+    margin-block: 2vh;
+    text-align: center;
+    color: var(--secondary-color);
+    border-bottom: solid var(--secondary-color);
+}
+
+.btnLogin{
+    color: white;
+    background-color: var(--secondary-color);
+    padding-block: 0.5vh;
+    font-size: 2vh;
+    margin-top: 1vh;
+    border: none;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.btnLogin:hover{
+    cursor:pointer;
+}
+.btnLogin:active{
+    scale: 0.9;
+}
+.btnAccount{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+}
+.btnForgotPwd,.btnSignUp{
+    font-size: 2vh;
+    border: none;
+    background-color: transparent;
+}
+.btnForgotPwd,.btnSignUp:hover{
+    cursor: pointer;
+}
+.btnForgotPwd:hover{
+    text-decoration: solid;
+    opacity: 70%;
+    text-decoration: underline;
+}
+.btnSignUp{
+    border-radius: 10px;
+    padding-block: 0.5vh;
+    font-size: 2vh;
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    margin-top: 4vh;
+    width: 25vw;
+    transition: 0.2s;
+}
+.btnSignUp:active{
+    scale: 0.9;
+}
